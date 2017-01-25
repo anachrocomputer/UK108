@@ -1,6 +1,6 @@
 
 AS=m68k-linux-gnu-as
-ASFLAGS=-M
+ASFLAGS=-M -march=68000 -mcpu=68008
 
 LD=m68k-linux-gnu-ld
 LDFLAGS=-T m68k.ld
