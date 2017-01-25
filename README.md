@@ -18,3 +18,8 @@ the /DTACK signal of the 68008 is grounded.
 ## The 68008 Adapter
 
 TBD
+
+## The 68008 chip
+
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/anachrocomputer/32266422976/" title="MC68008"><img src="https://c1.staticflickr.com/1/600/32266422976_3e35c6237a.jpg" width="500" height="375" alt="MC68008"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
