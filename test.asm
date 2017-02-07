@@ -48,6 +48,23 @@ RESET           nop                       ; Entry point at reset
                 bsr     clrscrn
                 
                 halt
+                reset
+                nop
+                stop    #$2000
+                rte
+                rts
+                trapv
+                rtr
+                
+                swap    d0
+                swap    d1
+                swap    d2
+                swap    d3
+                exg     d0,d1
+                exg     d1,d2
+                exg     d2,d3
+                exg     d3,d4
+                exg     a0,d2
 
                 section .data,,D
                 
@@ -59,6 +76,12 @@ RESET           nop                       ; Entry point at reset
                 
                 section .text,,C
 
+initvectab      move.w  #255,d0           ; Loop counter
+                move.l  #BUSERR,d1        ; D1 contains vector address
+                move    #0,a0             ; A0->vector table
+L001            move.l  d1,(a0)+
+                dbra    d0,L001
+                
 clrscrn         move.l  #VDU,a0           ; Three different ways to do same thing
                 move.w  #VDU,a0
                 lea     VDU,a0
