@@ -1,3 +1,5 @@
+![Static Badge](https://img.shields.io/badge/CPU-MC68008-green "CPU:MC68008")
+
 # UK108 #
 
 Software to run on a 68008 chip, adapted to fit a
